@@ -21,6 +21,11 @@ public class EmployeeController {
         return employeeService.getAllEmployees();
     }
 
+    @GetMapping("/employee")
+    public String helloEmployee() {
+    return "I am an employee";
+    }
+
     @GetMapping("/{id}")
     public Employee getEmployeeById(@PathVariable Long id) {
         return employeeService.getEmployeeById(id);
