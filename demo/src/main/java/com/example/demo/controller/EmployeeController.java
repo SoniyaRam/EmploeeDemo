@@ -16,7 +16,7 @@ public class EmployeeController {
     @Autowired
     private EmployeeService employeeService;
 
-    @GetMapping
+    @GetMapping("/getAllEmployees")
     public List<Employee> getAllEmployees() {
         return employeeService.getAllEmployees();
     }
@@ -26,7 +26,7 @@ public class EmployeeController {
         return employeeService.getEmployeeById(id);
     }
 
-    @PostMapping
+    @PostMapping("/saveEmployee")
     public Employee createEmployee(@RequestBody Employee employee) {
         return employeeService.addEmployee(employee);
     }
