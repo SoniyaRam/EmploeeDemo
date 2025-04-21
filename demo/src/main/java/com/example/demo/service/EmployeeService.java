@@ -19,7 +19,7 @@ public class EmployeeService {
         return employeeRepository.findAll();
     }
 
-    public Employee getEmployeeById(Long id) {
+    public Employee getEmployeeById(int id) {
         return employeeRepository.findById(id).orElse(null);
     }
 
@@ -27,7 +27,7 @@ public class EmployeeService {
         return employeeRepository.save(employee);
     }
 
-    public void deleteEmployee(Long id) {
+    public void deleteEmployee(int id) {
         employeeRepository.deleteById(id);
     }
 }
